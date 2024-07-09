@@ -16,6 +16,9 @@ namespace StayFIT_WFormUI
         static void Main()
         {
             string x = "Deneme";
+
+
+            int okan = 0;
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
