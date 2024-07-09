@@ -9,6 +9,7 @@ namespace StayFIT_DAL.Interfaces
 {
     public interface IUserRepo : IBaseRepo<User>
     {
-        User GetUserByEmail(string email, string password);
+        User GetUserByEmailWithPassword(string email, string password);
+        User GetUserByEmail(string email);
     }
 }

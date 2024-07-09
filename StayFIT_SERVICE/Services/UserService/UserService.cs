@@ -68,11 +68,57 @@ namespace StayFIT_SERVICE.Services.UserService
                 where: x => x.FirstName.Contains(firstName));
         }
 
+        public UserCreateDTO GetById(int id)
+        {
+            var user = _userRepo.GetById(id);
+
+            if (user != null)
+            {
+                return new UserCreateDTO
+                {
+                    Id = user.Id,
+                    FirstName = user.FirstName,
+                    LastName = user.LastName,
+                    Email = user.Email,
+                    Password = user.Password,
+                    Height = user.Height,
+                    Weight = user.Weight,
+                    BirthDate = user.BirthDate,
+                    Gender = user.Gender
+                };
+            }
+            return null;
+        }
+
+        public UserUpdateDTO GetUserByEmail(string email)
+        {
+            if (_userRepo.GetAny(x => x.Email == email))
+            {
+                var user = _userRepo.GetUserByEmail(email);
+                var userDto = new UserUpdateDTO {
+                    Id = user.Id,
+                    FirstName = user.FirstName,
+                    LastName = user.LastName,
+                    Email = user.Email,
+                    Password = user.Password,
+                    Height = user.Height,
+                    Weight = user.Weight,
+                    BirthDate = user.BirthDate,
+                    Gender = user.Gender
+                };
+                return userDto;
+            }
+            else
+            {
+                throw new Exception("User not found");
+            }
+        }
+
         public UserLoginDTO GetUserByEmailWithPassword(string email, string password)
         {
             if (_userRepo.GetAny(x => x.Email == email && x.Password == password))
             {
-                var user = _userRepo.GetUserByEmail(email, password);
+                var user = _userRepo.GetUserByEmailWithPassword(email, password);
                 var userDto = new UserLoginDTO { Email = user.Email, Password = user.Password };
                 return userDto;
             }
@@ -82,7 +128,7 @@ namespace StayFIT_SERVICE.Services.UserService
             }
         }
 
-        public int Update(UserCreateDTO model, int id)
+        public int Update(UserUpdateDTO model, int id)
         {
             var user = _userRepo.GetById(id);
             if (user is not null)
@@ -102,9 +148,5 @@ namespace StayFIT_SERVICE.Services.UserService
             }
         }
 
-        //private User IsValid(string email,string password)
-        //{
-        //    return _userRepo.
-        //}
     }
 }

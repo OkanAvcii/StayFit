@@ -111,6 +111,7 @@
             // Birthdate
             // 
             Birthdate.AutoSize = true;
+            Birthdate.BackColor = Color.IndianRed;
             Birthdate.Location = new Point(25, 193);
             Birthdate.Name = "Birthdate";
             Birthdate.Size = new Size(55, 15);
@@ -120,6 +121,7 @@
             // label6
             // 
             label6.AutoSize = true;
+            label6.BackColor = Color.ForestGreen;
             label6.Location = new Point(25, 161);
             label6.Name = "label6";
             label6.Size = new Size(51, 15);
@@ -136,6 +138,7 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.BackColor = Color.ForestGreen;
             label5.Location = new Point(25, 132);
             label5.Name = "label5";
             label5.Size = new Size(49, 15);
@@ -152,6 +155,7 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.BackColor = Color.ForestGreen;
             label4.Location = new Point(25, 103);
             label4.Name = "label4";
             label4.Size = new Size(63, 15);
@@ -168,6 +172,7 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.BackColor = Color.IndianRed;
             label3.Location = new Point(25, 74);
             label3.Name = "label3";
             label3.Size = new Size(42, 15);
@@ -184,6 +189,7 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = Color.IndianRed;
             label2.Location = new Point(25, 45);
             label2.Name = "label2";
             label2.Size = new Size(69, 15);
@@ -200,6 +206,7 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.IndianRed;
             label1.Location = new Point(25, 16);
             label1.Name = "label1";
             label1.Size = new Size(70, 15);
@@ -215,6 +222,7 @@
             btnCancel.TabIndex = 21;
             btnCancel.Text = "CANCEL";
             btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.Click += btnCancel_Click;
             // 
             // frmMyProfileForm
             // 
@@ -241,6 +249,7 @@
             Name = "frmMyProfileForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MyProfileForm";
+            Load += frmMyProfileForm_Load;
             grpGender.ResumeLayout(false);
             grpGender.PerformLayout();
             ResumeLayout(false);

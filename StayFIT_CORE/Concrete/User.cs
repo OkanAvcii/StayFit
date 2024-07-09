@@ -54,7 +54,6 @@ namespace StayFIT_CORE.Concrete
         public Gender Gender { get; set; }
         public DateTime BirthDate { get; set; }
         public int Height { get; set; }
-
         public int Weight { get; set; }
         public virtual ICollection<UserDailyActivity> UserDailyActivity { get; set; }
         public User()

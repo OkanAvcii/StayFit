@@ -38,12 +38,13 @@
             endOfDayReportToolStripMenuItem = new ToolStripMenuItem();
             benchmarkReportToolStripMenuItem = new ToolStripMenuItem();
             foodTypeReportToolStripMenuItem = new ToolStripMenuItem();
+            userDailyActivityToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { profileToolStripMenuItem, mealsToolStripMenuItem, reportsToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { profileToolStripMenuItem, mealsToolStripMenuItem, reportsToolStripMenuItem, userDailyActivityToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(695, 24);
@@ -69,6 +70,7 @@
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             exitToolStripMenuItem.Size = new Size(180, 22);
             exitToolStripMenuItem.Text = "Exit";
+            exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
             // mealsToolStripMenuItem
             // 
@@ -80,8 +82,9 @@
             // createMealToolStripMenuItem
             // 
             createMealToolStripMenuItem.Name = "createMealToolStripMenuItem";
-            createMealToolStripMenuItem.Size = new Size(120, 22);
-            createMealToolStripMenuItem.Text = "My Meal";
+            createMealToolStripMenuItem.Size = new Size(180, 22);
+            createMealToolStripMenuItem.Text = "My Meals";
+            createMealToolStripMenuItem.Click += createMealToolStripMenuItem_Click;
             // 
             // reportsToolStripMenuItem
             // 
@@ -107,6 +110,12 @@
             foodTypeReportToolStripMenuItem.Name = "foodTypeReportToolStripMenuItem";
             foodTypeReportToolStripMenuItem.Size = new Size(172, 22);
             foodTypeReportToolStripMenuItem.Text = "Food Type Report";
+            // 
+            // userDailyActivityToolStripMenuItem
+            // 
+            userDailyActivityToolStripMenuItem.Name = "userDailyActivityToolStripMenuItem";
+            userDailyActivityToolStripMenuItem.Size = new Size(114, 20);
+            userDailyActivityToolStripMenuItem.Text = "User Daily Activity";
             // 
             // frmMainForm
             // 
@@ -136,5 +145,6 @@
         private ToolStripMenuItem endOfDayReportToolStripMenuItem;
         private ToolStripMenuItem benchmarkReportToolStripMenuItem;
         private ToolStripMenuItem foodTypeReportToolStripMenuItem;
+        private ToolStripMenuItem userDailyActivityToolStripMenuItem;
     }
 }

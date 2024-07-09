@@ -9,7 +9,7 @@ namespace StayFIT_DAL.Interfaces
 {
     public interface IFoodRepo : IBaseRepo<Food>
     {
-        IList<Food> GetFoodByMeal(int mealId);
-        IList<Food> GetFoodsByCategory(int categoryId);
+        IList<Food> GetFoodByMealId(int mealId);
+        IList<Food> GetFoodsByCategoryId(int categoryId);
     }
 }

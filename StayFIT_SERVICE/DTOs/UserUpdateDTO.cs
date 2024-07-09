@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace StayFIT_SERVICE.DTOs
 {
-    public class UserCreateDTO
+    public class UserUpdateDTO
     {
         public int Id { get; set; }
         public string FirstName { get; set; }

@@ -16,8 +16,22 @@ namespace StayFIT_DAL.Concrete
         {
             _context = context;
         }
-        
-        public User GetUserByEmail(string email, string password)
+
+
+        public User GetUserByEmail(string email)
+        {
+            User user = _context.Users.SingleOrDefault(x => x.Email == email);
+            if (user != null)
+            {
+                return user;
+            }
+            else
+            {
+                throw new Exception("User not found");
+            }
+        }
+
+        public User GetUserByEmailWithPassword(string email, string password)
         {
             User user = _context.Users.SingleOrDefault(x => x.Email == email && x.Password == password);
             if (user != null)

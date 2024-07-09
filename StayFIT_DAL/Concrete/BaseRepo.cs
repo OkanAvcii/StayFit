@@ -41,7 +41,7 @@ namespace StayFIT_DAL.Concrete
             return _table.ToList();
         }
         /// <summary>
-        /// Debugla ne yaptığına bak.
+        /// Girilen propertylere göre database var mı yok mu kontrolünü yapar.
         /// </summary>
         /// <param name="expression"></param>
         /// <returns></returns>

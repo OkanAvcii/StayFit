@@ -1,4 +1,5 @@
-﻿using StayFIT_SERVICE.DTOs;
+﻿using StayFIT_CORE.Concrete;
+using StayFIT_SERVICE.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,9 +11,11 @@ namespace StayFIT_SERVICE.Services.UserService
     public interface IUserService
     {
         int Create(UserCreateDTO model);
-        int Update(UserCreateDTO model, int id);
+        int Update(UserUpdateDTO model, int id);
         int Delete(int id);
+        UserCreateDTO GetById(int id);
         UserLoginDTO GetUserByEmailWithPassword(string email, string password);
+        UserUpdateDTO GetUserByEmail(string email);
         IList<UserCreateDTO> GetAll();
         IList<UserCreateDTO> GetAllActive();
         IList<UserCreateDTO> GetByFullName(string firstName, string lastName);

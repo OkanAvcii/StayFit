@@ -18,13 +18,13 @@ namespace StayFIT_DAL.Concrete
             _context = context;
         }
 
-        public IList<Food> GetFoodByMeal(int mealId)
+        public IList<Food> GetFoodByMealId(int mealId)
         {
             return _context.Foods.Where(x => x.Id == mealId).ToList();
             //Buradaki id fooddan geliyor meal classından gelmesi gerekmiyormu!!!!!!!!!!!!!Hocaya sor.
         }
 
-        public IList<Food> GetFoodsByCategory(int categoryId)
+        public IList<Food> GetFoodsByCategoryId(int categoryId)
         {
             return _context.Foods.Where(x => x.Id == categoryId).ToList();
         }

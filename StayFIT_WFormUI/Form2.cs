@@ -1,4 +1,5 @@
 ﻿using StayFIT_CORE.Enums;
+using StayFIT_SERVICE.DTOs;
 using StayFIT_SERVICE.Services.UserService;
 using System;
 using System.Collections.Generic;
@@ -23,7 +24,7 @@ namespace StayFIT_WFormUI
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            _userService.Create(new StayFIT_SERVICE.DTOs.UserCreateDTO
+            _userService.Create(new UserCreateDTO
             {
                 FirstName = txtFirstName.Text,
                 LastName = txtLastName.Text,
